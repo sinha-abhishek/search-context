@@ -1,0 +1,102 @@
+{
+"testdata": [
+        {
+            "person": {
+                "name": "Ravi Raj",
+                "college": "Princeton",
+                "school": "XAVIER",
+                "city": "New York, US",
+                "hometown": "San Francisco, US",
+                "company": "Adobe",
+                "email": "ravi_raj@gmail.com",
+                "friends": [
+                    {
+                        "name": "Anshu T",
+                        "college": "Harvard",
+                        "school": "Karen's",
+                        "city": "Chicago, US",
+                        "hometown": "Patna, India",
+                        "company": "Microsoft",
+                        "email": "anshu_t@gmail.com"
+                    },
+                    {
+                        "name": "Anshu J",
+                        "college": "Cornell",
+                        "school": "DAV",
+                        "city": "Dallas, US",
+                        "hometown": "Bangalore, India",
+                        "company": "Zynga",
+                        "email": "anshu_j@gmail.com"
+                    },
+                    {
+                        "name": "Ria Shaw",
+                        "college": "VIT",
+                        "school": "DAV",
+                        "city": "Bangalore, India",
+                        "hometown": "Bangalore, India",
+                        "company": "TCS",
+                        "email": "ria_shaw@gmail.com"
+                    },
+                    {
+                        "name": "Ria J",
+                        "college": "SRM",
+                        "school": "Xavier",
+                        "city": "Bangalore, India",
+                        "hometown": "Bangalore, India",
+                        "company": "TCS",
+                        "email": "ria_j@gmail.com"
+                    }
+                ]
+            }
+        },
+        {
+            "person": {
+                "name": "Anshu T",
+                "college": "Harvard",
+                "school": "Karen's",
+                "city": "Chicago, US",
+                "hometown": "Patna, India",
+                "company": "Microsoft",
+                "email": "anshu_t@gmail.com",
+                "friends": [
+                    {
+                        "name": "Ravi Raj",
+                        "college": "Princeton",
+                        "school": "XAVIER",
+                        "city": "New York, US",
+                        "hometown": "San Francisco, US",
+                        "company": "Adobe",
+                        "email": "ravi_raj@gmail.com"
+                    },
+                    {
+                        "name": "Anu V",
+                        "college": "Cornell",
+                        "school": "Thomas",
+                        "city": "Dallas, US",
+                        "hometown": "Bangalore, India",
+                        "company": "IBM",
+                        "email": "anu_v@gmail.com"
+                    },
+                    {
+                        "name": "Ria Shaw",
+                        "college": "VIT",
+                        "school": "DAV",
+                        "city": "Bangalore, India",
+                        "hometown": "Bangalore, India",
+                        "company": "TCS",
+                        "email": "ria_shaw@gmail.com"
+                    },
+                    {
+                        "name": "Priya J",
+                        "college": "IITD",
+                        "school": "BIT",
+                        "city": "Bangalore, India",
+                        "hometown": "Patna, India",
+                        "company": "Infosys",
+                        "email": "priya_j@gmail.com"
+                    }
+                ]
+            }
+        }
+    ]
+ }
