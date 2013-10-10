@@ -23,6 +23,8 @@ class Entity {
 	 		->save();
 	 	     
 	 		$index->add($node,"name",$this->value);
+	 		$nindex = new Everyman\Neo4j\Index\NodeIndex($client, 'names');
+	 		$nindex->add($node,"name",$this->value);
 	 		//$this->id = $client->getId();
 	 		return $node->getId();
 	 	}

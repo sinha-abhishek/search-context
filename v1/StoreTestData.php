@@ -8,6 +8,8 @@ $client = new Everyman\Neo4j\Client();
 $data = file_get_contents("testdata");
 $index = new Everyman\Neo4j\Index\NodeIndex($client, 'emails');
 $index->save();
+$perindex = new Everyman\Neo4j\Index\NodeIndex($client, 'personNames');
+$perindex->save();
 $insIndex = new Everyman\Neo4j\Index\NodeIndex($client, 'institutes');
 echo $insIndex->save();
 $nindex = new Everyman\Neo4j\Index\NodeIndex($client, 'names');
@@ -24,7 +26,7 @@ $test = array($arrObj[0]);
 $tdata = array($test[0]);
 $actualData = $tdata[0];
 
-/*for($i = 10 ; $i <=500; $i++){
+/*for($i = 10 ; $i <=5000; $i++){
 
 	$earth = $client->getNode($i);
 	if($earth != null) {
@@ -44,6 +46,8 @@ $actualData = $tdata[0];
 foreach ($actualData->testdata as $index => $person) {
 	# code...
 	$per = new Person($person->person->name, $person->person->email);
+	$name = new Entity("personNames", $person->person->name);
+	$per->relate($name,"IS_NAMED");
 	$college = new Entity("institutes",$person->person->college);	
 	$per->relate($college,"WENT_TO");
 	$school = new Entity("institutes", $person->person->school);
@@ -76,6 +80,8 @@ foreach ($actualData->testdata as $index => $person) {
 
 function createFriend($friend) {
 	$per = new Person($friend->name, $friend->email);
+	$name = new Entity("personNames", $friend->name);
+	$per->relate($name,"IS_NAMED");
 	$college = new Entity("institutes",$friend->college);	
 	$per->relate($college,"WENT_TO");
 	$school = new Entity("institutes", $friend->school);

@@ -23,6 +23,18 @@ class Person {
 	 	}
 	 	return true;
 	 } 
+
+	 public static function findByEmail($email) {
+	 	$client = new Everyman\Neo4j\Client();
+	 	$index = new Everyman\Neo4j\Index\NodeIndex($client, 'emails');
+	 	$match = $index->findOne("email",$email);
+	 	if($match == null) {
+	 		return null;
+	 	}
+	 	return $match->getId();
+	 } 
+
+
 	 public function find($createIfFailed = false ) {
 	 	$client = new Everyman\Neo4j\Client();
 	 	$index = new Everyman\Neo4j\Index\NodeIndex($client, 'emails');
@@ -35,6 +47,8 @@ class Person {
 	 		->save();
 	 	     
 	 		$index->add($node,"email",$this->email);
+	 		$nindex = new Everyman\Neo4j\Index\NodeIndex($client, 'names');
+	 		$nindex->add($node,"name",$this->email);
 	 		//$this->id = $client->getId();
 	 		return $node->getId();
 	 	}

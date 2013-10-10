@@ -4,9 +4,9 @@
             "person": {
                 "name": "Ravi Raj",
                 "college": "Princeton",
-                "school": "XAVIER",
-                "city": "New York, US",
-                "hometown": "San Francisco, US",
+                "school": "Xavier",
+                "city": "New York",
+                "hometown": "San Francisco",
                 "company": "Adobe",
                 "email": "ravi_raj@gmail.com",
                 "friends": [
@@ -15,7 +15,7 @@
                         "college": "Harvard",
                         "school": "Karen's",
                         "city": "Chicago, US",
-                        "hometown": "Patna, India",
+                        "hometown": "Patna",
                         "company": "Microsoft",
                         "email": "anshu_t@gmail.com"
                     },
@@ -24,7 +24,7 @@
                         "college": "Cornell",
                         "school": "DAV",
                         "city": "Dallas, US",
-                        "hometown": "Bangalore, India",
+                        "hometown": "Tumkur",
                         "company": "Zynga",
                         "email": "anshu_j@gmail.com"
                     },
@@ -32,8 +32,8 @@
                         "name": "Ria Shaw",
                         "college": "VIT",
                         "school": "DAV",
-                        "city": "Bangalore, India",
-                        "hometown": "Bangalore, India",
+                        "city": "Bangalore",
+                        "hometown": "Bangalore",
                         "company": "TCS",
                         "email": "ria_shaw@gmail.com"
                     },
@@ -41,8 +41,8 @@
                         "name": "Ria J",
                         "college": "SRM",
                         "school": "Xavier",
-                        "city": "Bangalore, India",
-                        "hometown": "Bangalore, India",
+                        "city": "Bangalore",
+                        "hometown": "Bangalore",
                         "company": "TCS",
                         "email": "ria_j@gmail.com"
                     }
@@ -54,8 +54,8 @@
                 "name": "Anshu T",
                 "college": "Harvard",
                 "school": "Karen's",
-                "city": "Chicago, US",
-                "hometown": "Patna, India",
+                "city": "Chicago",
+                "hometown": "Patna",
                 "company": "Microsoft",
                 "email": "anshu_t@gmail.com",
                 "friends": [
@@ -63,8 +63,8 @@
                         "name": "Ravi Raj",
                         "college": "Princeton",
                         "school": "XAVIER",
-                        "city": "New York, US",
-                        "hometown": "San Francisco, US",
+                        "city": "New York",
+                        "hometown": "San Francisco",
                         "company": "Adobe",
                         "email": "ravi_raj@gmail.com"
                     },
@@ -72,8 +72,8 @@
                         "name": "Anu V",
                         "college": "Cornell",
                         "school": "Thomas",
-                        "city": "Dallas, US",
-                        "hometown": "Bangalore, India",
+                        "city": "Dallas",
+                        "hometown": "Bangalore",
                         "company": "IBM",
                         "email": "anu_v@gmail.com"
                     },
@@ -81,8 +81,8 @@
                         "name": "Ria Shaw",
                         "college": "VIT",
                         "school": "DAV",
-                        "city": "Bangalore, India",
-                        "hometown": "Bangalore, India",
+                        "city": "Bangalore",
+                        "hometown": "Bangalore",
                         "company": "TCS",
                         "email": "ria_shaw@gmail.com"
                     },
@@ -90,10 +90,108 @@
                         "name": "Priya J",
                         "college": "IITD",
                         "school": "BIT",
-                        "city": "Bangalore, India",
-                        "hometown": "Patna, India",
+                        "city": "Bangalore",
+                        "hometown": "Patna",
                         "company": "Infosys",
                         "email": "priya_j@gmail.com"
+                    }
+                ]
+            }
+        },
+        {
+            "person": {
+                "name": "Thomas Xavier",
+                "college": "Stanford",
+                "school": "Redford",
+                "city": "Chicago",
+                "hometown": "New York",
+                "company": "Microsoft",
+                "email": "thomas_xavier@gmail.com",
+                "friends": [
+                    {
+                        "name": "Ravi Bhushan",
+                        "college": "VIT",
+                        "school": "Don Bosco",
+                        "city": "Stanford",
+                        "hometown": "Patna",
+                        "company": "Cisco",
+                        "email": "ravi_bhushan@gmail.com"
+                    },
+                    {
+                        "name": "Anu Sahay",
+                        "college": "Patna University",
+                        "school": "DAV",
+                        "city": "Kolkata",
+                        "hometown": "Ranchi",
+                        "company": "IBM",
+                        "email": "anu_sahay@hotmail.com"
+                    },
+                    {
+                        "name": "Ria Shaw",
+                        "college": "VIT",
+                        "school": "DAV",
+                        "city": "Bangalore",
+                        "hometown": "Bangalore",
+                        "company": "TCS",
+                        "email": "ria_shaw@gmail.com"
+                    },
+                    {
+                        "name": "Priya Khare",
+                        "college": "Delhi University",
+                        "school": "Karen's",
+                        "city": "Bangalore",
+                        "hometown": "Lucknow",
+                        "company": "Karen's",
+                        "email": "priya_khare@gmail.com"
+                    }
+                ]
+            }
+        },
+            {
+            "person": {
+                "name": "Priya J",
+                "college": "IITD",
+                "school": "BIT",
+                "city": "Bangalore",
+                "hometown": "Patna",
+                "company": "Infosys",
+                "email": "priya_j@gmail.com",
+                "friends": [
+                    {
+                        "name": "Ravi Kumar",
+                        "college": "A.N College",
+                        "school": "DAV",
+                        "city": "Delhi",
+                        "hometown": "Delhi",
+                        "company": "TCS",
+                        "email": "ravi_kumar@gmail.com"
+                    },
+                    {
+                        "name": "Anu N",
+                        "college": "MIT",
+                        "school": "Thomas",
+                        "city": "Dallas",
+                        "hometown": "Bangalore",
+                        "company": "IBM",
+                        "email": "anu_n@gmail.com"
+                    },
+                    {
+                        "name": "Rita Shetty",
+                        "college": "SIT Tumkur",
+                        "school": "DPS",
+                        "city": "Bangalore",
+                        "hometown": "Bangalore",
+                        "company": "TCS",
+                        "email": "rita_shetty@gmail.com"
+                    },
+                    {
+                        "name": "Priya V",
+                        "college": "IITD",
+                        "school": "BIT",
+                        "city": "Bangalore",
+                        "hometown": "Patna",
+                        "company": "Infosys",
+                        "email": "priya_v@gmail.com"
                     }
                 ]
             }
