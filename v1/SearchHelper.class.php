@@ -33,7 +33,6 @@ class SearchHelper {
 	function __construct($email, $query){
 		//Get Id from email
 		$this->id = Person::findByEmail($email);
-		#echo "ID = ".$this->id. " for eamil=".$email;
 		$this->query = $query;
 		//break query into searchable terms
 		//TODO
@@ -51,6 +50,12 @@ class SearchHelper {
 
     public function getResults(){
     	$client = new Everyman\Neo4j\Client();
+    	if($this->id == null) {
+    		return null;
+    	}
+    	if(count($this->nodeList) == 0){
+    		return;
+    	}
     	// Find path between person and nodes.
     	//if(count($this->nodeList) <= self::THRESHOLD) {
     		$person = $client->getNode($this->id);
@@ -69,24 +74,44 @@ class SearchHelper {
     			$paths = $person->findPathsTo($endNode)
     					->setMaxDepth(self::MAX_DEPTH)
     					->getPaths();
-    			echo "<BR>".print_r(count($paths),1)."<BR>";
+    			//echo "<BR>".print_r(count($paths),1)."<BR>";
     			if(count($paths) == 0) {
-    				return null;
+    				continue;
     			}
     			//Very simplistic scoring. 100 * total_paths - sum of (each_path_depth * 50)
+    			//Possibly has issues of generating skewed score
     			$score += 100 * count($paths);
+    			$queriedNodes = array();
     			foreach ($paths as $key => $path) {
     				# code...
     				$score -= 50*$path->getLength();
     				$nodes = $path->getNodes();
-    				$nodeIn = $nodes[count($nodes) - 2];
+
+    				foreach ($nodes as $key => $node) {
+    					# code...
+    					if($node->getProperty("type") != "person"){
+    						continue;
+    					}
+    					if(isset($queriedNodes[$node->getId()])){
+    						continue;
+    					}
+    					$queriedNodes[$node->getId()] = true;
+    					//echo $node->getProperty("name");
+    					$pathCheck = $node->findPathsTo($endNode)
+    					->setMaxDepth(1)
+    					->getPaths();
+    					if($pathCheck != null){
+    						$nodesInPath[] = $node;
+    					}
+    				}
+    				/*$nodeIn = $nodes[count($nodes) - 2];
     				echo $nodeIn->getProperty("name");
     				if(!in_array($nodeIn, $nodesInPath) && $nodeIn->getId() != $person->getId()){//Noone would want to search himself
     					$nodesInPath[] = $nodeIn;  //Store the person nodes related directly
-    				}
+    				}*/
     				#echo print_r($nodes[count($nodes) - 2],1);
     			}
-    			echo $score;
+    			#echo $score;
     			$this->scorebyId[$endNode->getId()] = $score;
     			if($score > $maxScore){
     				$maxIndex = $index;
@@ -113,7 +138,7 @@ class SearchHelper {
     				$result['searchResults'][$index] = $this->getDataForPerson($node);
     			}
     			$relType = $result['searchResults'][$index][0]['type'];
-    			//$relationships = $node->getRelationships(array('WENT_TO',"SCHOOL","LIVES_IN", "BELONGS_TO", "WORKS_AT"),Relationships::DirectionIn);
+    			//$relationships = $node->getRelationships(array($relType),Relationship::DirectionIn);
     		}
     		return $result;
 
